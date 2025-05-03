@@ -1,0 +1,18 @@
+/* BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw=new BufferedWriter(new OutputStreamWriter(System.out));
+        int a = Integer.parseInt(br.readLine());
+        for (int i = 0; i < a; i++) {
+            String[] number=br.readLine().split(" ");
+            int b = Integer.parseInt(number[0]);
+            int c = Integer.parseInt(number[1]);
+            int d = b+c;
+            String count=String.valueOf(i+1);
+            bw.write("Case #"+count+": "+number[0]+" + " + number[1]+ " = " +String.valueOf(d));
+            bw.newLine();
+        }
+        bw.flush();
+        bw.close(); */
+/* String을 숫자로 바꿀떄는  Integer.parseInt() 숫자를 String으로 바꿀때는 String.valueOf()*/
+/*BufferedWriter는 문자열만을 출력하므로 출력할떄 문자열로 바꿔서 출력해야됨 */
+/* 마지막에는 flush로 꼭 다 내보내고 BufferedWriter나 Reader는 반복문안에 만들지 않기 */
+/*예외 처리를 위해 throws IOException도 꼭 해주기 */
