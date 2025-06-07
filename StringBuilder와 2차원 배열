@@ -1,0 +1,37 @@
+import java.util.*;
+import java.io.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int many=sc.nextInt();
+     /*    int dimension=10*10*many;
+        int[][] start=new int[many][2];*/
+        int[][] paper=new int[100][100];
+        int area=0;
+        for (int i=0;i<many;i++)
+        {
+            int x=sc.nextInt();
+            int y=sc.nextInt();
+            for (int a=x;a<x+10;a++)
+                for (int b=y;b<y+10;b++)
+                    paper[a][b]=1;
+                
+        }
+        for (int i=0;i<100;i++)
+            for (int j=0;j<100;j++)
+                if (paper[i][j]==1)
+                 area++;
+        sc.close();
+        System.out.println(area);
+    }
+}
+    
+
+
+//2차원 배열은 int[][] 이름=new int[행][열]의 개념으로 만들어집니다
+//        BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+//        BufferedWriter bw=new BufferedWriter(new OutputStreamWriter(System.out));
+//반복적으로 문자열을 더하거나 다뤄야할때는 StringBuilder가 훨씬 빠르니 연습할것
+//StringBuilder를 출력할떄는 항상 toString()를 이용해서 String으로 바꿔야됨 다른 String이랑 비교할때도 마찬가지
+//StringBuilder sb=new StringBuilder();
+//sb.append(in[j].charAt(i));
